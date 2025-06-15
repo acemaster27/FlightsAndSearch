@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const CityRepository=require("./repository/city_repository");
 // require('dotenv').config()
 
 const { PORT } = require('./config/ServerConfig');
@@ -16,6 +17,8 @@ const SetupandStartServer = async() => {
 
     app.listen(PORT,() => {
         console.log(`Server started at port ${PORT}`);
+        const repo= new CityRepository();
+        repo.createCity({name: "New Delhi"})
     })
 
 }
