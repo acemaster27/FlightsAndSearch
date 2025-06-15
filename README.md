@@ -18,6 +18,7 @@
         }
     ```
     -Once you have written the above code go to root directory and execute `npx sequelize db:create`
+    -`npx sequelize db:migrate`
 
 ## DB Design
     -Airplane Table (id, model_number, capacity)
